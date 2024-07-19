@@ -45,7 +45,7 @@
   align-items: flex-start;
   margin-bottom: 100px; /* Increase space between containers */
   position: relative;
-  width: 100%; /* Set a fixed width for the container */
+  width: 80vw; /* Set a fixed width for the container */
   max-width: 1200px;
 }
 
@@ -54,7 +54,7 @@
 }
 
 @media (max-width: 767px) {
-  .container, .alternate {
+  .container {
     flex-direction: column; /* Stack items vertically on mobile */
     align-items: center; /* Center items horizontally on mobile */
   }
