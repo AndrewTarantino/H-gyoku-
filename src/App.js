@@ -146,11 +146,12 @@ function App() {
         <div className={styles.container}>
           <ul className={styles.bulletList} ref={bulletListRef}>
             {[
-              "Phase 1: Raise initial funds with Moonshot and distribute Hōgyokus",
-              "Phase 2: Onboard new members with the power of the Hōgyoku",
-              "Phase 3: 1,000 Hōgyoku holders to manifest their dreams",
-              "Phase 4: 2500 Hōgyoku holders to unlock their true desires",
-              "Phase 5: Fuse your Hogyokus to unlock new levels of power and transform NFTs!"
+              "Phase 1: Onboard new members with the power of the Hōgyoku and start Moonshot launch",
+              "Phase 2: Raise initial funds and distribute Hōgyokus",
+              "Phase 3: 1,000 Hōgyoku holders unlock their true desires",
+              "Phase 4: 2,500 Hōgyoku holders to manifest their dreams",
+              "Phase 5: 5,000 Hōgyoku holders to transcend",
+              "Phase 6: Fuse your Hogyokus to unlock new levels of power and transform NFTs!"
             ].map((item, index) => (
               <li key={index} style={{ "--li-index": index }}>{item}</li>
             ))}
