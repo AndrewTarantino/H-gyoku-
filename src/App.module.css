@@ -68,7 +68,7 @@
 
   .container img, .alternate img {
     order: 2; /* Ensure image comes second */
-    width: 90%; /* Adjust image width for smaller screens */
+    width: 100%; /* Adjust image width for smaller screens */
     margin: 10px 0; /* Add margin for better spacing */
   }
 }
@@ -105,7 +105,7 @@
   .image, .alternate .image {
     margin-left: 0;
     margin-right: 0;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -231,14 +231,14 @@
   padding: 0; /* Remove default padding */
   text-align: left; /* Align text to the left */
   color: white; /* Ensure text color is white */
-  font-size: 1.2em; /* Set smaller font size for the list */
+  font-size: 1em; /* Set smaller font size for the list */
   font-family: 'Bangers', sans-serif; /* Apply the Bangers font */
   margin: 0 auto; /* Center the list container */
   max-width: 600px; /* Maximum width for the list */
 }
 
 .bulletList li {
-  margin-bottom: 40px; /* Add more space between each bullet point */
+  margin-bottom: 20px; /* Add more space between each bullet point */
   display: flex; /* Use flexbox for alignment */
   align-items: center; /* Center items vertically */
   opacity: 0; /* Start with invisible items */
@@ -267,8 +267,8 @@
 
 .icon {
   color: #800080; /* Set icon color to metallic purple */
-  font-size: 3em; /* Set icon size */
-  margin: 0 40px; /* Add more space between icons */
+  font-size: 2em; /* Adjust icon size for smaller screens */
+  margin: 0 20px; /* Add more space between icons */
   transition: color 0.3s, transform 0.3s, text-shadow 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
   text-shadow: 0 0 5px rgba(128, 0, 128, 0.5), 0 0 10px rgba(128, 0, 128, 0.5), 0 0 15px rgba(128, 0, 128, 0.5); /* Add a glowing effect */
   border-radius: 50%; /* Make the icon round */
