@@ -15,76 +15,69 @@
   overflow-y: auto; /* Make the container scrollable */
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .scrollableContent {
   padding: 20px; /* Add some padding for better readability */
   color: white; /* Set text color to ensure it's visible */
-  width: 100%; /* Set the width to 100% */
+  width: 90%; /* Set the width to 90% for better spacing */
+  max-width: 1200px; /* Maximum width for larger screens */
   text-align: left; /* Align text to the left */
-  font-size: 3em; /* Increase the font size */
+  font-size: 1.5em; /* Adjust font size */
   font-family: 'Nosifer', sans-serif; /* Apply the custom font */
   flex: 1; /* Allow the scrollable content to take up the available space */
   margin-bottom: 100px; /* Add margin at the bottom to ensure bottom banner is visible */
-  display: flex; /* Use flexbox for centering */
-  flex-direction: column;
-  align-items: center; /* Center items horizontally */
 }
 
 @media (min-width: 768px) {
   .scrollableContent {
-    font-size: 3em; /* Further increase the font size on larger screens */
-  }
-}
-
-@media (max-width: 767px) {
-  .scrollableContent {
-    font-size: 1.5em; /* Adjust font size for smaller screens */
-    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 2em; /* Further increase the font size on larger screens */
   }
 }
 
 .container {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 100px; /* Increase space between containers */
-  position: relative;
-  width: 80vw; /* Set a fixed width for the container */
-  max-width: 1200px; /* Max width for larger screens */
-}
-
-@media (max-width: 767px) {
-  .container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    width: 90vw; /* Adjust width for smaller screens */
-    margin-bottom: 50px; /* Reduce margin for smaller screens */
-  }
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+  margin-bottom: 50px; /* Reduce margin for better spacing */
+  width: 100%; /* Set width to 100% */
 }
 
 .alternate {
-  flex-direction: row-reverse;
+  flex-direction: column-reverse; /* Reverse the column order */
 }
 
 .container p {
-  flex: 1;
-  margin: 0; /* Remove default margins */
-  padding: 40px; /* Increase padding for better spacing */
+  margin: 20px 0; /* Add margin for spacing */
+  padding: 20px; /* Increase padding for better spacing */
   background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background to make text more readable */
   z-index: 1;
+  width: 100%; /* Full width for text */
+  max-width: 600px; /* Maximum width for text */
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Row layout for larger screens */
+    align-items: flex-start;
+  }
+
+  .alternate {
+    flex-direction: row-reverse; /* Row-reverse for larger screens */
+  }
+
   .container p {
-    padding: 20px; /* Adjust padding for smaller screens */
+    margin: 0; /* Remove margin for larger screens */
+    padding: 40px; /* Increase padding for larger screens */
   }
 }
 
 .image {
-  width: 800px; /* Default width for images on desktop */
+  width: 100%; /* Full width for images */
+  max-width: 800px; /* Maximum width for images */
   height: auto; /* Maintain aspect ratio */
-  margin-left: 20px; /* Space between text and image */
-  margin-top: -20px; /* Reduce overlap for more spacing */
-  margin-bottom: 20px; /* Increase space below the image */
+  margin: 20px 0; /* Add margin for spacing */
   z-index: 0;
   opacity: 0; /* Start with invisible items */
   transform: translateX(100px); /* Start with a slight horizontal offset */
@@ -92,35 +85,34 @@
 }
 
 .alternate .image {
-  margin-left: 0;
-  margin-right: 20px; /* Space between text and image */
-  margin-top: -20px; /* Reduce overlap for more spacing */
-  margin-bottom: 20px; /* Increase space below the image */
-  z-index: 0;
   transform: translateX(-100px); /* Start with a slight horizontal offset from the other direction */
 }
 
-@media (max-width: 767px) {
-  .image, .alternate .image {
-    width: 100%; /* Adjust image width for mobile */
-    margin-left: 0; /* Remove margin for mobile */
-    margin-right: 0; /* Remove margin for mobile */
-    margin-top: 20px; /* Add space above the image for mobile */
-    margin-bottom: 20px; /* Add space below the image for mobile */
-    transform: translateX(0); /* No offset on mobile */
+@media (min-width: 768px) {
+  .image {
+    margin: 0 20px; /* Margin for larger screens */
+  }
+
+  .alternate .image {
+    margin: 0 20px; /* Margin for larger screens */
   }
 }
 
 .specialImage {
-  width: 400px; /* Adjust as needed for the second image */
+  width: 100%; /* Full width for images */
+  max-width: 400px; /* Adjust as needed for the second image */
   height: auto; /* Maintain aspect ratio */
 }
 
 .largeImage {
-  width: 900px; /* Adjust as needed for the larger fourth image */
+  width: 100%; /* Full width for images */
+  max-width: 900px; /* Adjust as needed for the larger fourth image */
   height: auto; /* Maintain aspect ratio */
   position: relative; /* Ensure positioning is relative */
-  left: -200px; /* Adjust this value to push the image to the left */
+  left: 0; /* Centered on mobile */
+  @media (min-width: 768px) {
+    left: -200px; /* Offset for larger screens */
+  }
 }
 
 /* Add CSS for the scrolling banners */
@@ -174,6 +166,8 @@
   text-align: center;
   color: white;
   font-family: 'Bangers', sans-serif;
+  width: 90%; /* Set width to 90% for better spacing */
+  max-width: 1200px; /* Maximum width for larger screens */
 }
 
 .middleText {
@@ -223,6 +217,7 @@
   font-size: 1.2em; /* Set smaller font size for the list */
   font-family: 'Bangers', sans-serif; /* Apply the Bangers font */
   margin: 0 auto; /* Center the list container */
+  max-width: 600px; /* Maximum width for the list */
 }
 
 .bulletList li {
