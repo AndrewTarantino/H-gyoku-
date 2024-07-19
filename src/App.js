@@ -91,7 +91,7 @@ function App() {
         <img src={logo} className="App-logo" alt="Hōgyoku logo" />
         <a
           className={styles.headerText}
-          href="https://reactjs.org"
+          href="https://dexscreener.com/solana/evv3nemqdbjsfrpzucte2zkkremkuc3esjis1a8muehp"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -164,7 +164,7 @@ function App() {
           <a href="https://x.com/Hogyokus_?t=t4co4bJ3DnVFSIBbpRSbOA&s=09" target="_blank" rel="noopener noreferrer" className={`${styles.icon} ${styles.bounce2}`} ref={iconRefs[1]}>
             <i className="fab fa-twitter"></i>
           </a>
-          <a href="https://dexscreener.com/your_dexscreener_link" target="_blank" rel="noopener noreferrer" className={`${styles.icon} ${styles.bounce3}`} ref={iconRefs[2]}>
+          <a href="https://dexscreener.com/solana/evv3nemqdbjsfrpzucte2zkkremkuc3esjis1a8muehp" target="_blank" rel="noopener noreferrer" className={`${styles.icon} ${styles.bounce3}`} ref={iconRefs[2]}>
             <i className="fas fa-chart-line"></i>
           </a>
         </div>
