@@ -6,43 +6,43 @@
 }
 
 .appBackground {
-  background-image: url('../public/Background.jpeg'), url('../public/Hado90.jpg');
-  background-size: cover, cover;
+  background-image: url('../public/Background.jpeg'), url('../public/Hado90.jpg'); /* Ensure the correct path */
+  background-size: cover, cover; /* Cover the container */
   background-repeat: no-repeat, no-repeat;
-  background-position: center top, center bottom;
-  min-height: 100vh;
-  background-attachment: fixed, fixed;
-  overflow-y: auto;
+  background-position: center top, center bottom; /* Adjust positions for better transition */
+  min-height: 100vh; /* Make the container height cover the viewport */
+  background-attachment: fixed, fixed; /* Ensure the background images are fixed */
+  overflow-y: auto; /* Make the container scrollable */
   display: flex;
   flex-direction: column;
 }
 
 .scrollableContent {
-  padding: 20px;
-  color: white;
-  width: 100vw;
-  text-align: left;
-  font-size: 2em;
-  font-family: 'Nosifer', sans-serif;
-  flex: 1;
-  margin-bottom: 100px;
-  display: flex;
+  padding: 20px; /* Add some padding for better readability */
+  color: white; /* Set text color to ensure it's visible */
+  width: 100vw; /* Set the width to 100% of the viewport width */
+  text-align: left; /* Align text to the left */
+  font-size: 2em; /* Adjusted font size for better readability */
+  font-family: 'Nosifer', sans-serif; /* Apply the custom font */
+  flex: 1; /* Allow the scrollable content to take up the available space */
+  margin-bottom: 100px; /* Add margin at the bottom to ensure bottom banner is visible */
+  display: flex; /* Use flexbox for centering */
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center items horizontally */
 }
 
 @media (min-width: 768px) {
   .scrollableContent {
-    font-size: 3em;
+    font-size: 3em; /* Increase the font size on larger screens */
   }
 }
 
 .container {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 100px;
+  margin-bottom: 100px; /* Increase space between containers */
   position: relative;
-  width: 80vw;
+  width: 80vw; /* Set a fixed width for the container */
 }
 
 .alternate {
@@ -51,113 +51,114 @@
 
 @media (max-width: 767px) {
   .container {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Center items horizontally on mobile */
+    margin-bottom: 50px; /* Reduce margin between containers */
   }
 
   .alternate {
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically on mobile */
   }
 
   .container p, .alternate p {
-    order: 1;
-    font-size: 1em;
-    padding: 10px;
+    order: 1; /* Ensure text comes first */
+    font-size: 1em; /* Further adjust font size for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
   }
 
   .container img, .alternate img {
-    order: 2;
-    width: 100%;
-    margin: 10px 0;
+    order: 2; /* Ensure image comes second */
+    width: 90%; /* Adjust image width for smaller screens */
+    margin: 10px 0; /* Add margin for better spacing */
   }
 }
 
 .container p {
   flex: 1;
-  margin: 0;
-  padding: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0; /* Remove default margins */
+  padding: 40px; /* Increase padding for better spacing */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background to make text more readable */
   z-index: 1;
 }
 
 .image {
-  width: 800px;
-  height: auto;
-  margin-left: 20px;
-  margin-top: -20px;
-  margin-bottom: 20px;
+  width: 800px; /* Default width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 20px; /* Space between text and image */
+  margin-top: -20px; /* Reduce overlap for more spacing */
+  margin-bottom: 20px; /* Increase space below the image */
   z-index: 0;
-  opacity: 0;
-  transform: translateX(100px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0; /* Start with invisible items */
+  transform: translateX(100px); /* Start with a slight horizontal offset */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add fade-in and slide-in animation */
 }
 
 .alternate .image {
   margin-left: 0;
-  margin-right: 20px;
-  margin-top: -20px;
-  margin-bottom: 20px;
-  transform: translateX(-100px);
+  margin-right: 20px; /* Space between text and image */
+  margin-top: -20px; /* Reduce overlap for more spacing */
+  margin-bottom: 20px; /* Increase space below the image */
+  transform: translateX(-100px); /* Start with a slight horizontal offset from the other direction */
 }
 
 @media (max-width: 767px) {
   .image, .alternate .image {
     margin-left: 0;
     margin-right: 0;
-    width: 100%;
+    width: 90%;
   }
 }
 
 .specialImage {
-  width: 400px;
-  height: auto;
+  width: 400px; /* Adjust as needed for the second image */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .largeImage {
-  width: 900px;
-  height: auto;
-  position: relative;
-  left: -200px;
+  width: 900px; /* Adjust as needed for the larger fourth image */
+  height: auto; /* Maintain aspect ratio */
+  position: relative; /* Ensure positioning is relative */
+  left: -200px; /* Adjust this value to push the image to the left */
 }
 
 @media (max-width: 767px) {
   .specialImage {
-    width: 100%;
+    width: 90%; /* Adjust width for smaller screens */
   }
 
   .largeImage {
-    width: 100%;
-    left: 0;
+    width: 90%; /* Adjust width for smaller screens */
+    left: 0; /* Reset positioning for smaller screens */
   }
 }
 
+/* Add CSS for the scrolling banners */
 .banner, .bottomBanner {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   overflow: hidden;
   position: relative;
-  z-index: 1000;
+  z-index: 1000; /* Ensure the banner is above other elements */
   white-space: nowrap;
-  height: 100px;
+  height: 100px; /* Adjust the height of the banner */
 }
 
 .bottomBanner {
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin-top: 20px; /* Ensure some space above the bottom banner */
+  margin-bottom: 0; /* Ensure the bottom banner is not cut off */
 }
 
 .bannerContent {
   display: inline-block;
-  color: #fff;
-  font-size: 4em;
+  color: #fff; /* Text color */
+  font-size: 4em; /* Increase font size for the banner text */
   padding: 10px 0;
-  font-family: 'Bangers', sans-serif;
+  font-family: 'Bangers', sans-serif; /* Apply the Bangers font */
 }
 
 .bannerContent span {
   display: inline-block;
-  padding-right: 100px;
+  padding-right: 100px; /* Space between repeated text */
 }
 
 @keyframes scroll-left {
@@ -176,44 +177,44 @@
 }
 
 .middleText, .middleTextLarge {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0; /* Start with invisible items */
+  transform: translateY(20px); /* Start with a slight downward offset */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add fade-in and slide-up animation */
   text-align: center;
   color: white;
   font-family: 'Bangers', sans-serif;
-  width: 90%;
-  max-width: 1200px;
+  width: 90%; /* Set width to 90% for better spacing */
+  max-width: 1200px; /* Maximum width for larger screens */
 }
 
 .middleText {
   font-size: 2em;
   padding: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Add more space below the middle text */
 }
 
 .middleTextLarge {
-  font-size: 3em;
-  padding: 40px;
-  margin: 40px 0;
+  font-size: 3em; /* Larger font size */
+  padding: 40px; /* Increase padding for better spacing */
+  margin: 40px 0; /* Add space above and below */
 }
 
 .middleText.visible, .middleTextLarge.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to the final position */
 }
 
 @media (max-width: 767px) {
   .middleText {
-    font-size: 1.5em;
-    padding: 10px;
-    margin-bottom: 20px;
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin-bottom: 20px; /* Reduce margin for smaller screens */
   }
 
   .middleTextLarge {
-    font-size: 2em;
-    padding: 20px;
-    margin: 20px 0;
+    font-size: 2em; /* Adjust font size for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin: 20px 0; /* Reduce margin for smaller screens */
   }
 }
 
@@ -221,65 +222,66 @@
   font-family: 'Bangers', sans-serif;
   font-size: 3em;
   color: white;
-  text-decoration: none;
+  text-decoration: none; /* Remove underline from link */
 }
 
+/* Add CSS for the bullet list */
 .bulletList {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  color: white;
-  font-size: 1em;
-  font-family: 'Bangers', sans-serif;
-  margin: 0 auto;
-  max-width: 600px;
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  text-align: left; /* Align text to the left */
+  color: white; /* Ensure text color is white */
+  font-size: 1em; /* Set smaller font size for the list */
+  font-family: 'Bangers', sans-serif; /* Apply the Bangers font */
+  margin: 0 auto; /* Center the list container */
+  max-width: 600px; /* Maximum width for the list */
 }
 
 .bulletList li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  margin-bottom: 20px; /* Add more space between each bullet point */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  opacity: 0; /* Start with invisible items */
+  transform: translateY(20px); /* Start with a slight downward offset */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add fade-in and slide-up animation */
 }
 
 .bulletList .visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to the final position */
 }
 
 .bulletList li::before {
-  content: '•';
-  margin-right: 10px;
-  color: #fff;
-  font-size: 1.8em;
+  content: '•'; /* Custom bullet point character */
+  margin-right: 10px; /* Space between the bullet point and the text */
+  color: #fff; /* Custom color for the bullet point */
+  font-size: 1.8em; /* Size of the custom bullet point */
 }
 
 .socialIcons {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px 0; /* Add some space above and below the icons */
 }
 
 .icon {
-  color: #800080;
-  font-size: 2em;
-  margin: 0 20px;
-  transition: color 0.3s, transform 0.3s, text-shadow 0.3s, box-shadow 0.3s;
-  text-shadow: 0 0 5px rgba(128, 0, 128, 0.5), 0 0 10px rgba(128, 0, 128, 0.5), 0 0 15px rgba(128, 0, 128, 0.5);
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(128, 0, 128, 0.7), 0 0 20px rgba(128, 0, 128, 0.7);
-  background: radial-gradient(circle, rgba(128,0,128,1) 0%, rgba(75,0,130,1) 35%, rgba(0,0,0,1) 100%);
-  padding: 10px;
+  color: #800080; /* Set icon color to metallic purple */
+  font-size: 2em; /* Adjust icon size for smaller screens */
+  margin: 0 20px; /* Add more space between icons */
+  transition: color 0.3s, transform 0.3s, text-shadow 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+  text-shadow: 0 0 5px rgba(128, 0, 128, 0.5), 0 0 10px rgba(128, 0, 128, 0.5), 0 0 15px rgba(128, 0, 128, 0.5); /* Add a glowing effect */
+  border-radius: 50%; /* Make the icon round */
+  box-shadow: 0 0 10px rgba(128, 0, 128, 0.7), 0 0 20px rgba(128, 0, 128, 0.7); /* Add a soft outer glow */
+  background: radial-gradient(circle, rgba(128,0,128,1) 0%, rgba(75,0,130,1) 35%, rgba(0,0,0,1) 100%); /* Radial gradient for a Hōgyoku-like effect */
+  padding: 10px; /* Add padding inside the border */
 }
 
 .icon:hover {
-  color: #dda0dd;
-  transform: scale(1.2);
-  text-shadow: 0 0 10px rgba(221, 160, 221, 0.5), 0 0 15px rgba(221, 160, 221, 0.5), 0 0 20px rgba(221, 160, 221, 0.5);
-  box-shadow: 0 0 15px rgba(221, 160, 221, 0.7), 0 0 25px rgba(221, 160, 221, 0.7);
+  color: #dda0dd; /* Change color on hover to a lighter purple */
+  transform: scale(1.2); /* Scale up on hover for a 3D effect */
+  text-shadow: 0 0 10px rgba(221, 160, 221, 0.5), 0 0 15px rgba(221, 160, 221, 0.5), 0 0 20px rgba(221, 160, 221, 0.5); /* Enhance the glow on hover */
+  box-shadow: 0 0 15px rgba(221, 160, 221, 0.7), 0 0 25px rgba(221, 160, 221, 0.7); /* Enhance the outer glow on hover */
 }
 
 @keyframes bounce1 {
@@ -322,6 +324,6 @@
 }
 
 .image.visible {
-  opacity: 1;
-  transform: translateX(0);
+  opacity: 1; /* Make visible */
+  transform: translateX(0); /* Move to the final position */
 }
