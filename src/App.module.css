@@ -22,7 +22,7 @@
   color: white; /* Set text color to ensure it's visible */
   width: 100vw; /* Set the width to 100% of the viewport width */
   text-align: left; /* Align text to the left */
-  font-size: 2em; /* Reduce font size for better readability on mobile */
+  font-size: 2em; /* Adjusted font size for better readability */
   font-family: 'Nosifer', sans-serif; /* Apply the custom font */
   flex: 1; /* Allow the scrollable content to take up the available space */
   margin-bottom: 100px; /* Add margin at the bottom to ensure bottom banner is visible */
@@ -33,7 +33,7 @@
 
 @media (min-width: 768px) {
   .scrollableContent {
-    font-size: 3em; /* Further increase the font size on larger screens */
+    font-size: 3em; /* Increase the font size on larger screens */
   }
 }
 
@@ -61,13 +61,13 @@
 
   .container p, .alternate p {
     order: 1; /* Ensure text comes first */
-    font-size: 1.5em; /* Adjust font size for smaller screens */
+    font-size: 1.2em; /* Adjust font size for smaller screens */
     padding: 20px; /* Adjust padding for smaller screens */
   }
 
   .container img, .alternate img {
     order: 2; /* Ensure image comes second */
-    width: 90%; /* Adjust image width for smaller screens */
+    width: 100%; /* Adjust image width for smaller screens */
     margin: 20px 0; /* Add margin for better spacing */
   }
 }
@@ -104,7 +104,7 @@
   .image, .alternate .image {
     margin-left: 0;
     margin-right: 0;
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -122,11 +122,11 @@
 
 @media (max-width: 767px) {
   .specialImage {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 100%; /* Adjust width for smaller screens */
   }
 
   .largeImage {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 100%; /* Adjust width for smaller screens */
     left: 0; /* Reset positioning for smaller screens */
   }
 }
