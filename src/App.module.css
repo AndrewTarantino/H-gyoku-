@@ -51,25 +51,25 @@
 
 @media (max-width: 767px) {
   .container {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
+    flex-direction: column !important; /* Ensures flex direction is column on mobile */
+    align-items: center !important; /* Centers items on mobile */
+    margin-bottom: 50px !important; /* Adjust margin for mobile */
   }
 
   .alternate {
-    flex-direction: column;
+    flex-direction: column !important; /* Ensures alternate containers are also column */
   }
 
   .container p, .alternate p {
-    order: 1;
-    font-size: 1em;
-    padding: 10px;
+    order: 1 !important; /* Text first */
+    font-size: 1em !important; /* Adjust font size for mobile */
+    padding: 10px !important; /* Adjust padding for mobile */
   }
 
   .container img, .alternate img {
-    order: 2;
-    width: 90%;
-    margin: 10px 0;
+    order: 2 !important; /* Image second */
+    width: 90% !important; /* Adjust image width for mobile */
+    margin: 10px 0 !important; /* Add margin for better spacing */
   }
 }
 
