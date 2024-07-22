@@ -12,8 +12,8 @@ import newImage4 from './Wonderweiss.png';
 function App() {
   const bulletListRef = useRef(null);
   const textRef = useRef(null);
-  const imageRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
-  const iconRefs = [useRef(null), useRef(null), useRef(null)];
+  const imageRefs = useRef([useRef(null), useRef(null), useRef(null), useRef(null)]);
+  const iconRefs = useRef([useRef(null), useRef(null), useRef(null), useRef(null)]); // Update to 4 for the new icon
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,12 +39,18 @@ function App() {
       observer.observe(item);
     });
 
-    imageRefs.forEach((ref) => {
-      observer.observe(ref.current);
+    const imageRefsCurrent = imageRefs.current;
+    imageRefsCurrent.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
     });
 
-    iconRefs.forEach((ref) => {
-      observer.observe(ref.current);
+    const iconRefsCurrent = iconRefs.current;
+    iconRefsCurrent.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
     });
 
     return () => {
@@ -54,14 +60,18 @@ function App() {
       textItems.forEach((item) => {
         observer.unobserve(item);
       });
-      imageRefs.forEach((ref) => {
-        observer.unobserve(ref.current);
+      imageRefsCurrent.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
       });
-      iconRefs.forEach((ref) => {
-        observer.unobserve(ref.current);
+      iconRefsCurrent.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
       });
     };
-  }, [styles, imageRefs, iconRefs]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className={styles.appBackground}>
@@ -113,7 +123,7 @@ function App() {
             thus granting unimaginable power.
             An investment in Hōgyokus is an investment in limitless potential and untapped power.
           </p>
-          <img src={imagePath} alt="Hōgyoku" className={`${styles.image} ${styles.slideIn}`} ref={imageRefs[0]} />
+          <img src={imagePath} alt="Hōgyoku" className={`${styles.image} ${styles.slideIn}`} ref={imageRefs.current[0]} />
         </div>
         <div className={`${styles.container} ${styles.alternate}`}>
           <p>
@@ -123,7 +133,7 @@ function App() {
             This inherent scarcity makes it an incredibly valuable asset,
             much like Bitcoin's limited supply.
           </p>
-          <img src={newImage2} alt="Hōgyoku" className={`${styles.image} ${styles.specialImage} ${styles.slideIn}`} ref={imageRefs[1]} />
+          <img src={newImage2} alt="Hōgyoku" className={`${styles.image} ${styles.specialImage} ${styles.slideIn}`} ref={imageRefs.current[1]} />
         </div>
         <div className={styles.container}>
           <p>
@@ -132,7 +142,7 @@ function App() {
             blockchain technology, making Hōgyokus a part of a movement that will
             redefine power and potential.
           </p>
-          <img src={newImage3} alt="Hōgyoku" className={`${styles.image} ${styles.slideIn}`} ref={imageRefs[2]} />
+          <img src={newImage3} alt="Hōgyoku" className={`${styles.image} ${styles.slideIn}`} ref={imageRefs.current[2]} />
         </div>
         <div className={`${styles.container} ${styles.alternate}`}>
           <p>
@@ -141,7 +151,7 @@ function App() {
             versatile and valuable asset, akin to a cryptocurrency with multiple use
             cases and applications.
           </p>
-          <img src={newImage4} alt="Hōgyoku" className={`${styles.image} ${styles.largeImage} ${styles.slideIn}`} ref={imageRefs[3]} />
+          <img src={newImage4} alt="Hōgyoku" className={`${styles.image} ${styles.largeImage} ${styles.slideIn}`} ref={imageRefs.current[3]} />
         </div>
         <div className={styles.container}>
           <ul className={styles.bulletList} ref={bulletListRef}>
@@ -158,14 +168,17 @@ function App() {
           </ul>
         </div>
         <div className={styles.socialIcons}>
-          <a href="https://t.me/+NjwqPqYVGD9mMjJh" target="_blank" rel="noopener noreferrer" className={`${styles.icon} ${styles.bounce1}`} ref={iconRefs[0]}>
+          <a href="https://t.me/+NjwqPqYVGD9mMjJh" target="_blank" rel="noopener noreferrer" className={`${styles.icon} ${styles.bounce1}`} ref={iconRefs.current[0]}>
             <i className="fab fa-telegram-plane"></i>
           </a>
-          <a href="https://x.com/Hogyokus_?t=t4co4bJ3DnVFSIBbpRSbOA&s=09" target="_blank" rel="noopener noreferrer" className={`${styles.icon} ${styles.bounce2}`} ref={iconRefs[1]}>
+          <a href="https://x.com/Hogyokus_?t=t4co4bJ3DnVFSIBbpRSbOA&s=09" target="_blank" rel="noopener noreferrer" className={`${styles.icon} ${styles.bounce2}`} ref={iconRefs.current[1]}>
             <i className="fab fa-twitter"></i>
           </a>
-          <a href="https://dexscreener.com/solana/evv3nemqdbjsfrpzucte2zkkremkuc3esjis1a8muehp" target="_blank" rel="noopener noreferrer" className={`${styles.icon} ${styles.bounce3}`} ref={iconRefs[2]}>
+          <a href="https://dexscreener.com/solana/evv3nemqdbjsfrpzucte2zkkremkuc3esjis1a8muehp" target="_blank" rel="noopener noreferrer" className={`${styles.icon} ${styles.bounce3}`} ref={iconRefs.current[2]}>
             <i className="fas fa-chart-line"></i>
+          </a>
+          <a href="https://www.reddit.com/r/cryptocurrency/" target="_blank" rel="noopener noreferrer" className={`${styles.icon} ${styles.bounce4}`} ref={iconRefs.current[3]}>
+            <i className="fab fa-reddit"></i>
           </a>
         </div>
       </div>
