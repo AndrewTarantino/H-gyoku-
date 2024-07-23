@@ -65,12 +65,13 @@
     font-size: 1em;
     padding: 10px;
     width: 100%;
+    text-align: left; /* Align text to the left */
   }
 
   .container img, .alternate img {
     order: 2;
-    width: 90%;
-    margin: 10px 0;
+    width: 90%; /* Make images take up 90% of the screen width */
+    margin: 10px auto; /* Center images horizontally */
   }
 }
 
@@ -106,7 +107,7 @@
   .image, .alternate .image {
     margin-left: 0;
     margin-right: 0;
-    width: 100%;
+    width: 90%;
     transform: none; /* Remove transform on mobile for better alignment */
   }
 }
@@ -125,11 +126,11 @@
 
 @media (max-width: 767px) {
   .specialImage {
-    width: 100%;
+    width: 90%;
   }
 
   .largeImage {
-    width: 100%;
+    width: 90%;
     left: 0;
   }
 }
@@ -330,10 +331,6 @@
 
 .icon.bounce3 {
   animation: bounce3 3s infinite;
-}
-
-.icon.bounce4 {
-  animation: bounce4 3.5s infinite;
 }
 
 .image.visible {
