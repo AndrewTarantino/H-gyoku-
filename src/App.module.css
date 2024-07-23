@@ -51,8 +51,7 @@
 
 @media (max-width: 767px) {
   .container {
-    flex-direction: column;
-    align-items: center;
+    width: 95%;
     margin-bottom: 50px;
   }
 
@@ -61,14 +60,12 @@
   }
 
   .container p, .alternate p {
-    order: 1;
     font-size: 1em;
     padding: 10px;
   }
 
   .container img, .alternate img {
-    order: 2;
-    width: 90%;
+    width: 100%;
     margin: 10px 0;
   }
 }
@@ -82,7 +79,8 @@
 }
 
 .image {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   height: auto;
   margin-left: 20px;
   margin-top: -20px;
@@ -105,17 +103,19 @@
   .image, .alternate .image {
     margin-left: 0;
     margin-right: 0;
-    width: 90%;
+    width: 100%;
   }
 }
 
 .specialImage {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: auto;
 }
 
 .largeImage {
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
   height: auto;
   position: relative;
   left: -200px;
@@ -123,11 +123,11 @@
 
 @media (max-width: 767px) {
   .specialImage {
-    width: 90%;
+    width: 100%;
   }
 
   .largeImage {
-    width: 90%;
+    width: 100%;
     left: 0;
   }
 }
