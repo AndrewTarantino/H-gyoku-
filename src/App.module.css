@@ -67,7 +67,7 @@
 }
 
 .specialImage {
-  width: 50%;
+  width: 40%; /* Adjusted size for newImage2 */
   height: auto;
 }
 
@@ -297,15 +297,11 @@
 }
 
 .icon.bounce2 {
-  animation: bounce2 2.4s infinite;
+  animation: bounce2 2.5s infinite;
 }
 
 .icon.bounce3 {
-  animation: bounce3 2.8s infinite;
-}
-
-.icon.bounce4 {
-  animation: bounce4 3.2s infinite;
+  animation: bounce3 3s infinite;
 }
 
 .image.visible {
