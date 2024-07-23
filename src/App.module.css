@@ -67,22 +67,17 @@
 }
 
 .newImage1 {
-  width: 60%; /* Increased size for newImage1 */
-  left: -20px; /* Pushed to the left */
+  margin-left: -20px; /* Adjust this value to move it to the left */
+}
+
+.newImage4 {
+  margin-left: -40px; /* Adjust this value to move it to the left */
+  width: 55%; /* Adjust this value to make it slightly bigger */
 }
 
 .specialImage {
   width: 40%; /* Adjusted size for newImage2 */
   height: auto;
-}
-
-.newImage3 {
-  width: 55%; /* Increased size for newImage3 */
-}
-
-.newImage4 {
-  width: 60%; /* Increased size for newImage4 */
-  left: -20px; /* Pushed to the left */
 }
 
 .largeImage {
@@ -253,7 +248,7 @@
 
 .icon {
   color: #800080;
-  font-size: 2em;
+  font-size: 2.5em; /* Adjusted icon size */
   margin: 0 20px;
   transition: color 0.3s, transform 0.3s, text-shadow 0.3s, box-shadow 0.3s;
   text-shadow: 0 0 5px rgba(128, 0, 128, 0.5), 0 0 10px rgba(128, 0, 128, 0.5), 0 0 15px rgba(128, 0, 128, 0.5);
@@ -307,15 +302,19 @@
 }
 
 .icon.bounce1 {
-  animation: bounce1 2s infinite;
+  animation: bounce1 1.9s infinite;
 }
 
 .icon.bounce2 {
-  animation: bounce2 2.5s infinite;
+  animation: bounce2 2.4s infinite;
 }
 
 .icon.bounce3 {
-  animation: bounce3 3s infinite;
+  animation: bounce3 2.9s infinite;
+}
+
+.icon.bounce4 {
+  animation: bounce4 3.4s infinite;
 }
 
 .image.visible {

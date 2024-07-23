@@ -143,7 +143,7 @@ function App() {
             blockchain technology, making Hōgyokus a part of a movement that will
             redefine power and potential.
           </p>
-          <img src={newImage3} alt="Hōgyoku" className={`${styles.image} ${styles.slideIn}`} ref={imageRefs[2]} />
+          <img src={newImage3} alt="Hōgyoku" className={`${styles.image} ${styles.newImage3} ${styles.slideIn}`} ref={imageRefs[2]} />
         </div>
         <div className={`${styles.container} ${styles.alternate}`}>
           <p>
@@ -152,7 +152,7 @@ function App() {
             versatile and valuable asset, akin to a cryptocurrency with multiple use
             cases and applications.
           </p>
-          <img src={newImage4} alt="Hōgyoku" className={`${styles.image} ${styles.largeImage} ${styles.newImage4} ${styles.slideIn}`} ref={imageRefs[3]} />
+          <img src={newImage4} alt="Hōgyoku" className={`${styles.image} ${styles.newImage4} ${styles.slideIn}`} ref={imageRefs[3]} />
         </div>
         <div className={styles.container}>
           <ul className={styles.bulletList} ref={bulletListRef}>
