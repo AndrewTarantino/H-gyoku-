@@ -159,7 +159,7 @@ function App() {
             {[
               "Phase 1: Onboard new members with the power of the Hōgyoku and start Moonshot launch",
               "Phase 2: Raise initial funds and distribute Hōgyokus",
-              "Phase 3: 1,000 Hōgyoku holders unlock their true desires",
+              "Phase 3: 1,000 Hōgyoku holders to unlock their true desires",
               "Phase 4: 2,500 Hōgyoku holders to manifest their dreams",
               "Phase 5: 5,000 Hōgyoku holders to transcend",
               "Phase 6: Fuse your Hogyokus to unlock new levels of power and transform NFTs!"

@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 @font-face {
   font-family: 'Bangers';
   src: url('../public/fonts/Bangers-Regular.ttf') format('truetype');
@@ -64,15 +68,6 @@
 
 .alternate .image {
   transform: translateX(-100px);
-}
-
-.newImage1 {
-  margin-left: -20px; /* Adjust this value to move it to the left */
-}
-
-.newImage4 {
-  margin-left: -40px; /* Adjust this value to move it to the left */
-  width: 55%; /* Adjust this value to make it slightly bigger */
 }
 
 .specialImage {
@@ -248,7 +243,7 @@
 
 .icon {
   color: #800080;
-  font-size: 3em; /* Adjusted icon size */
+  font-size: 3em; /* Adjust this value to make the icons bigger */
   margin: 0 20px;
   transition: color 0.3s, transform 0.3s, text-shadow 0.3s, box-shadow 0.3s;
   text-shadow: 0 0 5px rgba(128, 0, 128, 0.5), 0 0 10px rgba(128, 0, 128, 0.5), 0 0 15px rgba(128, 0, 128, 0.5);
@@ -302,19 +297,19 @@
 }
 
 .icon.bounce1 {
-  animation: bounce1 1.9s infinite;
+  animation: bounce1 2s infinite;
 }
 
 .icon.bounce2 {
-  animation: bounce2 2.4s infinite;
+  animation: bounce2 2.5s infinite;
 }
 
 .icon.bounce3 {
-  animation: bounce3 2.9s infinite;
+  animation: bounce3 3s infinite;
 }
 
 .icon.bounce4 {
-  animation: bounce4 3.4s infinite;
+  animation: bounce4 3.5s infinite;
 }
 
 .image.visible {
