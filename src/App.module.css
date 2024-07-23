@@ -21,7 +21,7 @@
   padding: 20px;
   color: white;
   width: 100vw;
-  text-align: left;
+  text-align: center; /* Center text for all screen sizes */
   font-size: 2em;
   font-family: 'Nosifer', sans-serif;
   flex: 1;
@@ -34,42 +34,31 @@
 @media (min-width: 768px) {
   .scrollableContent {
     font-size: 3em;
+    text-align: left; /* Left-align text for larger screens */
   }
 }
 
 .container {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column; /* Stack items vertically by default */
+  align-items: center;
   margin-bottom: 100px;
   position: relative;
   width: 80vw;
 }
 
 .alternate {
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .container {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px; /* Reduced margin for better spacing */
+    flex-direction: row; /* Stack items horizontally for larger screens */
+    align-items: flex-start;
   }
 
   .alternate {
-    flex-direction: column;
-  }
-
-  .container p, .alternate p {
-    order: 1;
-    font-size: 0.9em; /* Further reduced font size for readability */
-    padding: 5px; /* Adjusted padding */
-  }
-
-  .container img, .alternate img {
-    order: 2;
-    width: 95%; /* Further reduced width for better fit */
-    margin: 5px 0; /* Adjusted margin for spacing */
+    flex-direction: row-reverse; /* Alternate row direction for larger screens */
   }
 }
 
@@ -82,10 +71,9 @@
 }
 
 .image {
-  width: 800px;
+  width: 100%;
   height: auto;
-  margin-left: 20px;
-  margin-top: -20px;
+  margin-top: 20px;
   margin-bottom: 20px;
   z-index: 0;
   opacity: 0;
@@ -94,41 +82,37 @@
 }
 
 .alternate .image {
-  margin-left: 0;
-  margin-right: 20px;
-  margin-top: -20px;
-  margin-bottom: 20px;
   transform: translateX(-100px);
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .image, .alternate .image {
-    margin-left: 0;
-    margin-right: 0;
-    width: 90%;
+    width: 800px;
+    margin-left: 20px;
+    margin-top: -20px;
+    margin-bottom: 20px;
   }
 }
 
 .specialImage {
-  width: 400px;
+  width: 100%;
   height: auto;
 }
 
 .largeImage {
-  width: 900px;
+  width: 100%;
   height: auto;
   position: relative;
-  left: -200px;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .specialImage {
-    width: 90%;
+    width: 400px;
   }
 
   .largeImage {
-    width: 90%;
-    left: 0;
+    width: 900px;
+    left: -200px;
   }
 }
 
@@ -328,10 +312,6 @@
 
 .icon.bounce3 {
   animation: bounce3 3s infinite;
-}
-
-.icon.bounce4 {
-  animation: bounce4 3.5s infinite;
 }
 
 .image.visible {
