@@ -66,9 +66,23 @@
   transform: translateX(-100px);
 }
 
+.newImage1 {
+  width: 60%; /* Increased size for newImage1 */
+  left: -20px; /* Pushed to the left */
+}
+
 .specialImage {
   width: 40%; /* Adjusted size for newImage2 */
   height: auto;
+}
+
+.newImage3 {
+  width: 55%; /* Increased size for newImage3 */
+}
+
+.newImage4 {
+  width: 60%; /* Increased size for newImage4 */
+  left: -20px; /* Pushed to the left */
 }
 
 .largeImage {

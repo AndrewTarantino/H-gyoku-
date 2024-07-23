@@ -12,7 +12,7 @@ import newImage4 from './Wonderweiss.png';
 function App() {
   const bulletListRef = useRef(null);
   const textRef = useRef(null);
-  
+
   const imageRef1 = useRef(null);
   const imageRef2 = useRef(null);
   const imageRef3 = useRef(null);
@@ -124,7 +124,7 @@ function App() {
             thus granting unimaginable power.
             An investment in Hōgyokus is an investment in limitless potential and untapped power.
           </p>
-          <img src={imagePath} alt="Hōgyoku" className={`${styles.image} ${styles.slideIn}`} ref={imageRefs[0]} />
+          <img src={imagePath} alt="Hōgyoku" className={`${styles.image} ${styles.newImage1} ${styles.slideIn}`} ref={imageRefs[0]} />
         </div>
         <div className={`${styles.container} ${styles.alternate}`}>
           <p>
@@ -152,7 +152,7 @@ function App() {
             versatile and valuable asset, akin to a cryptocurrency with multiple use
             cases and applications.
           </p>
-          <img src={newImage4} alt="Hōgyoku" className={`${styles.image} ${styles.largeImage} ${styles.slideIn}`} ref={imageRefs[3]} />
+          <img src={newImage4} alt="Hōgyoku" className={`${styles.image} ${styles.largeImage} ${styles.newImage4} ${styles.slideIn}`} ref={imageRefs[3]} />
         </div>
         <div className={styles.container}>
           <ul className={styles.bulletList} ref={bulletListRef}>
