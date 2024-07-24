@@ -39,8 +39,6 @@
   position: relative;
   width: 100%;
   max-width: 1200px;
-  flex-direction: row;
-  gap: 20px; /* Space between text and image */
 }
 
 .alternate {
@@ -57,8 +55,8 @@
 }
 
 /* Adjust the text container for the alternate layout */
-.alternate p {
-  margin-left: 20px; /* Move text towards the center */
+.alternate .text-box {
+  margin-left: 20px; /* Adjust this value to move text closer to the center */
 }
 
 .image {
@@ -328,9 +326,10 @@
 
 /* Adjustments for specific images */
 .newImage1 {
-  width: 55%; /* Increase size of newImage1 */
+  width: 55%; /* Adjust size as needed */
   height: auto;
-  left: -30px; /* Move newImage1 to the left */
+  position: relative; /* Ensure positioning is relative */
+  left: -50px; /* Move newImage1 to the left */
 }
 
 .newImage3 {
@@ -338,10 +337,35 @@
   height: auto;
 }
 
+/* Adjust the container styling to ensure proper layout */
+.container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 100px;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  flex-direction: row; /* Ensure flex direction is set */
+  gap: 40px; /* Adjust spacing between text and image */
+}
+
+/* Specific adjustments for the alternate layout */
+.alternate {
+  flex-direction: row-reverse;
+}
+
+/* Adjust the text box for the alternate layout */
+.alternate p {
+  align-self: flex-start; /* Align text box to the start of the flex container */
+  margin-left: -30px; /* Move text box to the left (negative margin) */
+  position: relative; /* Ensure positioning is relative for margin adjustments */
+  left: -40px; /* Further fine-tune positioning if needed */
+}
+
 /* Specific adjustments for newImage4 */
 .newImage4 {
-  width: 65%;
+  width: 65%; /* Adjusted width as needed */
   height: auto;
   position: relative;
-  left: -50px; /* Adjust to ensure proper alignment */
+  left: -70px; /* Adjust to ensure proper alignment */
 }
