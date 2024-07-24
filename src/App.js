@@ -51,11 +51,15 @@ function App() {
     });
 
     imageRefs.forEach((ref) => {
-      observer.observe(ref.current);
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
     });
 
     iconRefs.forEach((ref) => {
-      observer.observe(ref.current);
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
     });
 
     return () => {
@@ -66,10 +70,14 @@ function App() {
         observer.unobserve(item);
       });
       imageRefs.forEach((ref) => {
-        observer.unobserve(ref.current);
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
       });
       iconRefs.forEach((ref) => {
-        observer.unobserve(ref.current);
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
       });
     };
   }, [imageRefs, iconRefs, styles]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -186,8 +194,6 @@ function App() {
       <div className={styles.bottomBanner}>
         <div className={styles.bannerContentWrapper}>
           <div className={styles.bannerContent}>
-            <span>Buy Hogyokus!</span>
-            <span>$HOKU</span>
             <span>Buy Hogyokus!</span>
             <span>$HOKU</span>
             <span>Buy Hogyokus!</span>
