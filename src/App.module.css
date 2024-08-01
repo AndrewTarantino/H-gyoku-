@@ -39,6 +39,8 @@
   position: relative;
   width: 100%;
   max-width: 1200px;
+  flex-direction: row;
+  gap: 40px; /* Adjust spacing between text and image */
 }
 
 .alternate {
@@ -54,7 +56,6 @@
   width: 50%;
 }
 
-/* Adjust the text container for the alternate layout */
 .alternate .text-box {
   margin-left: 20px; /* Adjust this value to move text closer to the center */
 }
@@ -96,7 +97,6 @@
 .imageText {
   flex: 1; /* Allow the text box to grow */
 }
-
 
 .largeImage {
   width: 50%;
