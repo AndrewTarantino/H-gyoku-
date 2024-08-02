@@ -49,20 +49,20 @@
 .container p {
   flex: 1;
   margin: 0;
-  padding: 1.5vw; /* Adjusted padding */
+  padding: 1.5vw;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   width: 50%;
-  font-size: 1.5vw; /* Adjusted font size */
+  font-size: 1.5vw;
 }
 
 .alternate .container p {
-  margin-left: 0; /* Adjusted for alignment in alternate layout */
-  padding-right: 1.5vw; /* Ensure padding consistency */
+  margin-left: 0;
+  padding-right: 1.5vw;
 }
 
 .image, .specialImage, .largeImage {
-  max-width: 100%; /* Ensure images fit within container width */
+  max-width: 100%;
   height: auto;
   opacity: 0;
   transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
@@ -79,13 +79,13 @@
 }
 
 .specialImage {
-  width: 100%; /* Make image responsive */
-  max-width: 35vw; /* Control maximum size */
+  width: 100%;
+  max-width: 25vw;
 }
 
 .largeImage {
-  width: 100%; /* Make image responsive */
-  max-width: 40vw; /* Control maximum size */
+  width: 100%;
+  max-width: 40vw;
 }
 
 .middleText, .middleTextLarge {
@@ -152,14 +152,14 @@
   .container {
     flex-direction: column;
     align-items: center;
-    gap: 2vw; /* Reduce gap for mobile */
+    gap: 2vw;
   }
 
   .container p {
     width: 90%;
     margin-bottom: 2vh;
-    font-size: 4vw; /* Increase font size for mobile */
-    padding: 3vw; /* Adjust padding for better fit on smaller screens */
+    font-size: 4vw;
+    padding: 3vw;
   }
 
   .image, .specialImage, .largeImage {
@@ -170,35 +170,35 @@
   }
 
   .specialImage {
-    max-width: 40vw; /* Increase max-width for mobile */
+    max-width: 35vw;
   }
 
   .largeImage {
-    max-width: 90vw; /* Increase max-width for mobile */
+    max-width: 90vw;
   }
 
   .middleText {
-    font-size: 6vw; /* Increase font size for mobile */
-    padding: 1.5vw; /* Adjust padding for better fit on smaller screens */
-    margin-top: 1vh; /* Reduce top margin to decrease space above the text */
-    margin-bottom: 4vh; /* Maintain bottom margin */
+    font-size: 6vw;
+    padding: 1.5vw;
+    margin-top: 1vh;
+    margin-bottom: 4vh;
   }
 
   .headerText {
-    font-size: 6vw; /* Increase font size for smaller screens */
-    padding: 2vw 4vw; /* Increase padding for better touch targets */
-    margin-bottom: 1vh; /* Adjust margin for better spacing */
+    font-size: 6vw;
+    padding: 2vw 4vw;
+    margin-bottom: 1vh;
   }
 
   .middleTextLarge {
-    font-size: 8vw; /* Increase font size for mobile */
-    padding: 3vw; /* Adjust padding for better fit on smaller screens */
+    font-size: 8vw;
+    padding: 3vw;
     margin: 4vh 0;
   }
 
   .bulletList {
-    font-size: 4vw; /* Increase font size for mobile */
-    max-width: 100%;
+    font-size: 5vw;
+    max-width: 90%;
   }
 
   .bulletList li {
@@ -206,13 +206,13 @@
   }
 
   .bulletList li::before {
-    font-size: 5vw; /* Increase font size for bullet points */
-    margin-right: 2vw; /* Increase space between bullet and text */
+    font-size: 5vw;
+    margin-right: 2vw;
   }
 
   .headerText {
-    font-size: 6vw; /* Increase font size for smaller screens */
-    padding: 2vw 4vw; /* Increase padding for better touch targets */
+    font-size: 6vw;
+    padding: 2vw 4vw;
   }
 }
 
@@ -223,22 +223,22 @@
   position: relative;
   z-index: 1000;
   white-space: nowrap;
-  height: auto; /* Automatically adjust height to fit content */
-  padding: 1vh 0; /* Reduced padding to make the banner smaller */
+  height: auto;
+  padding: 1vh 0;
 }
 
 .bannerContent, .bottomBannerContent {
   display: inline-block;
   color: #fff;
-  font-size: 5vw; /* Smaller font size to fit smaller banner */
-  padding: 0.5vw 0; /* Reduced padding to match the smaller font size */
+  font-size: 5vw;
+  padding: 0.5vw 0;
   font-family: 'Bangers', sans-serif;
   white-space: nowrap;
 }
 
 .bannerContent span, .bottomBannerContent span {
   display: inline-block;
-  padding-right: 5vw; /* Reduced space between repeating content */
+  padding-right: 5vw;
 }
 
 .bannerContentWrapper, .bottomBannerContentWrapper {
@@ -258,32 +258,32 @@
 
 @media (max-width: 767px) {
   .bannerContent, .bottomBannerContent {
-    font-size: 8vw; /* Increase font size for smaller screens */
-    padding: 1vw 0; /* Adjust padding for smaller screens */
+    font-size: 8vw;
+    padding: 1vw 0;
   }
   
   .bannerContent span, .bottomBannerContent span {
-    padding-right: 8vw; /* Adjust spacing for smaller screens */
+    padding-right: 8vw;
   }
 }
 
 .headerText {
   font-family: 'Bangers', sans-serif;
-  font-size: 4vw; /* Adjust as needed for scaling */
-  padding: 1vw 2vw; /* Adjust padding for better touch targets */
+  font-size: 7vw;
+  padding: 1vw 2vw;
   color: white;
   text-decoration: none;
-  background-color: #800080; /* Background color */
-  border: 2px solid #fff; /* Border color */
-  border-radius: 0.5vw; /* Rounded corners */
-  display: inline-block; /* Ensures proper alignment */
+  background-color: #800080;
+  border: 2px solid #fff;
+  border-radius: 0.5vw;
+  display: inline-block;
   transition: background-color 0.3s, transform 0.3s;
-  margin-bottom: 1vh; /* Adjust margin to reduce space between button and text */
+  margin-bottom: 1vh;
 }
 
 .headerText:hover {
-  background-color: #dda0dd; /* Hover color */
-  transform: scale(1.1); /* Scale effect on hover */
+  background-color: #dda0dd;
+  transform: scale(1.1);
 }
 
 .socialIcons {
@@ -417,15 +417,15 @@
 
 /* Adjust text box for alternate layout */
 .alternate p {
-  margin-left: 0; /* Adjusted for alignment in alternate layout */
+  margin-left: 0;
   position: relative;
-  left: 0; /* Adjusted for alignment */
+  left: 0;
 }
 
 /* Button styles */
 .buyhogyokusButton {
-  font-size: 4vw; /* Adjust font size like .headerText */
-  padding: 1.5vw 3vw; /* Adjust padding for better touch targets */
+  font-size: 4vw;
+  padding: 1.5vw 3vw;
   border: 2px solid #fff;
   border-radius: 0.5vw;
   background-color: #800080;
