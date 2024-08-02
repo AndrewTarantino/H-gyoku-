@@ -49,16 +49,16 @@
 .container p {
   flex: 1;
   margin: 0;
-  padding: 2vw;
+  padding: 1.5vw; /* Adjusted padding */
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   width: 50%;
-  font-size: 2vw;
+  font-size: 1.5vw; /* Adjusted font size */
 }
 
 .alternate .container p {
   margin-left: 0; /* Adjusted for alignment in alternate layout */
-  padding-right: 2vw; /* Ensure padding consistency */
+  padding-right: 1.5vw; /* Ensure padding consistency */
 }
 
 .image, .specialImage, .largeImage {
@@ -158,6 +158,8 @@
   .container p {
     width: 90%;
     margin-bottom: 2vh;
+    font-size: 4vw; /* Increase font size for mobile */
+    padding: 3vw; /* Adjust padding for better fit on smaller screens */
   }
 
   .image, .specialImage, .largeImage {
@@ -168,37 +170,49 @@
   }
 
   .specialImage {
-    max-width: 40vw;
+    max-width: 40vw; /* Increase max-width for mobile */
   }
 
   .largeImage {
-    max-width: 80vw;
+    max-width: 90vw; /* Increase max-width for mobile */
   }
 
   .middleText {
-    font-size: 4vw;
-    padding: 1vw;
-    margin-bottom: 2vh;
+    font-size: 6vw; /* Increase font size for mobile */
+    padding: 1.5vw; /* Adjust padding for better fit on smaller screens */
+    margin-top: 1vh; /* Reduce top margin to decrease space above the text */
+    margin-bottom: 4vh; /* Maintain bottom margin */
+  }
+
+  .headerText {
+    font-size: 6vw; /* Increase font size for smaller screens */
+    padding: 2vw 4vw; /* Increase padding for better touch targets */
+    margin-bottom: 1vh; /* Adjust margin for better spacing */
   }
 
   .middleTextLarge {
-    font-size: 5vw;
-    padding: 2vw;
-    margin: 2vh 0;
+    font-size: 8vw; /* Increase font size for mobile */
+    padding: 3vw; /* Adjust padding for better fit on smaller screens */
+    margin: 4vh 0;
   }
 
   .bulletList {
-    font-size: 2.4vw;
+    font-size: 4vw; /* Increase font size for mobile */
     max-width: 100%;
   }
 
   .bulletList li {
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
   }
 
   .bulletList li::before {
-    font-size: 3vw;
-    margin-right: 1vw;
+    font-size: 5vw; /* Increase font size for bullet points */
+    margin-right: 2vw; /* Increase space between bullet and text */
+  }
+
+  .headerText {
+    font-size: 6vw; /* Increase font size for smaller screens */
+    padding: 2vw 4vw; /* Increase padding for better touch targets */
   }
 }
 
@@ -244,20 +258,32 @@
 
 @media (max-width: 767px) {
   .bannerContent, .bottomBannerContent {
-    font-size: 6vw; /* Font size for smaller screens */
+    font-size: 8vw; /* Increase font size for smaller screens */
     padding: 1vw 0; /* Adjust padding for smaller screens */
   }
   
   .bannerContent span, .bottomBannerContent span {
-    padding-right: 6vw; /* Adjust spacing for smaller screens */
+    padding-right: 8vw; /* Adjust spacing for smaller screens */
   }
 }
 
 .headerText {
   font-family: 'Bangers', sans-serif;
-  font-size: 4vw;
+  font-size: 4vw; /* Adjust as needed for scaling */
+  padding: 1vw 2vw; /* Adjust padding for better touch targets */
   color: white;
   text-decoration: none;
+  background-color: #800080; /* Background color */
+  border: 2px solid #fff; /* Border color */
+  border-radius: 0.5vw; /* Rounded corners */
+  display: inline-block; /* Ensures proper alignment */
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 1vh; /* Adjust margin to reduce space between button and text */
+}
+
+.headerText:hover {
+  background-color: #dda0dd; /* Hover color */
+  transform: scale(1.1); /* Scale effect on hover */
 }
 
 .socialIcons {
@@ -269,7 +295,7 @@
 
 .icon {
   color: #800080;
-  font-size: 7vw;
+  font-size: 10vw;
   margin: 0 2vw;
   transition: color 0.3s, transform 0.3s, text-shadow 0.3s, box-shadow 0.3s;
   text-shadow: 0 0 0.5vw rgba(128, 0, 128, 0.5), 0 0 1vw rgba(128, 0, 128, 0.5), 0 0 1.5vw rgba(128, 0, 128, 0.5);
@@ -394,4 +420,23 @@
   margin-left: 0; /* Adjusted for alignment in alternate layout */
   position: relative;
   left: 0; /* Adjusted for alignment */
+}
+
+/* Button styles */
+.buyhogyokusButton {
+  font-size: 4vw; /* Adjust font size like .headerText */
+  padding: 1.5vw 3vw; /* Adjust padding for better touch targets */
+  border: 2px solid #fff;
+  border-radius: 0.5vw;
+  background-color: #800080;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.buyhogyokusButton:hover {
+  background-color: #dda0dd;
+  transform: scale(1.1);
 }
