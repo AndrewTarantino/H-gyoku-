@@ -109,6 +109,18 @@
   font-size: 4vw;
   padding: 4vw;
   margin: 4vh 0;
+  overflow: visible; /* Ensure content isn't cut off */
+  white-space: normal; /* Allows text to wrap if necessary */
+  word-wrap: break-word; /* Prevents long words from causing overflow */
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+  .middleTextLarge {
+    font-size: 7.5vw !important; /* Ensure this rule takes precedence */
+    padding: 3vw !important; /* Ensure this rule takes precedence */
+    margin: 3vh 0 !important; /* Ensure this rule takes precedence */
+  }
 }
 
 .middleText.visible, .middleTextLarge.visible {
@@ -290,19 +302,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2vh 0;
+  margin: 4vh 0; /* Increase the margin for more space between the chart and icons */
 }
 
 .icon {
   color: #800080;
-  font-size: 10vw;
-  margin: 0 2vw;
+  font-size: 5vw; /* Increase font size slightly for larger scaling */
+  margin: 0 3vw; /* Increase margin for more space between icons */
   transition: color 0.3s, transform 0.3s, text-shadow 0.3s, box-shadow 0.3s;
   text-shadow: 0 0 0.5vw rgba(128, 0, 128, 0.5), 0 0 1vw rgba(128, 0, 128, 0.5), 0 0 1.5vw rgba(128, 0, 128, 0.5);
   border-radius: 50%;
   box-shadow: 0 0 1vw rgba(128, 0, 128, 0.7), 0 0 2vw rgba(128, 0, 128, 0.7);
   background: radial-gradient(circle, rgba(128,0,128,1) 0%, rgba(75,0,130,1) 35%, rgba(0,0,0,1) 100%);
-  padding: 1vw;
+  padding: 2vw; /* Increase padding for a larger clickable area */
+}
+
+/* Additional styling for mobile devices */
+@media (max-width: 768px) {
+  .icon {
+    font-size: 10vw; /* Increase icon size further on smaller screens */
+    margin: 0 4vw; /* Adjust margin for more space between icons */
+  }
 }
 
 .icon:hover {
@@ -369,12 +389,19 @@
   transform: translateX(0);
 }
 
-/* Adjustments for specific images */
 .newImage1 {
   width: 40% !important;
   height: auto;
   position: relative;
   left: -5vw;
+}
+
+@media (max-width: 768px) {
+  .newImage1 {
+    width: 45% !important; /* Increase the image size on mobile */
+    left: 10; /* Adjust the positioning if necessary */
+    top: 0; /* Optional: Adjust the vertical positioning */
+  }
 }
 
 .newImage2 {
@@ -440,3 +467,26 @@
   background-color: #dda0dd;
   transform: scale(1.1);
 }
+
+.chartContainer {
+  width: 100%; 
+  max-width: 1200px; /* Adjust this as needed */
+  margin: 20px auto; /* Center the chart container */
+  padding: 0; /* Remove any padding */
+}
+
+#dexscreener-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#dexscreener-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  zoom: 10.5; /* Adjust this value to scale the content */
+}
+
